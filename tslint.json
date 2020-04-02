@@ -1,0 +1,22 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "no-console": false,
+    "interface-name": false,
+    "interface-over-type-literal": false,
+    "radix": false,
+    "member-ordering": false,
+    "object-literal-sort-keys": false,
+    "comment-format": false,
+    "no-string-literal": false,
+    "prettier": [true, "./.prettierrc.yaml"],
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "case-insensitive",
+        "named-imports-order": "case-insensitive"
+      }
+    ]
+  }
+}
