@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.settings
+.classpath
+.project
+eclipse-bin
+build
+dist
+node_modules
+*.iml
