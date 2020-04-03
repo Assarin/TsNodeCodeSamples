@@ -7,22 +7,26 @@
     "src/"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "webpack",
+    "clean": "rm -rf ./dist && rm -rf ./node_modules",
     "lint": "tslint -c tslint.json --project .",
     "lint-fix": "tslint -c tslint.json --project . --fix",
     "release": "npm run lint && npm run build",
-    "run-file": "sh run-file.sh",
+    "run-file": "npm run build && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^13.11.0",
     "@types/lodash": "^4.14.149",
+    "@types/node": "^13.11.0",
     "lodash": "^4.17.15",
-    "typescript": "^3.8.3",
+    "prettier": "^2.0.2",
+    "ts-loader": "^6.2.2",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.3.0",
-    "prettier": "^2.0.2"
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }
